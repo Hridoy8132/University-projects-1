@@ -1,0 +1,145 @@
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+a{text-decoration: none;}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.top{
+    width: 100%;
+    height: 100px;
+    background: rgba(4, 121, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 60px;
+   
+}
+
+.logo_area{
+    width:20%;
+}
+.logo_area a{
+    display: flex;
+    justify-content: space-between;
+}
+.logo_area a img{
+    width: 100px;
+    margin-right: 30%;
+}
+.logo_area a h2{
+    color: #fff;
+    text-transform: uppercase;
+    font-family: cursive;
+    margin-right: 30px;
+    column-gap: 40px;
+    justify-content: space-between;
+}
+
+.menu_area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left:80px;
+}
+.menu_area ul{
+    list-style: none;
+    font-size: 15px;
+    
+}
+.menu_area ul li{
+    width: 170px;
+    border: 1px solid #fff;
+    height: 50px;
+    line-height: 50px;  /* aitar jnno text gulo center a asce */
+    text-align: center;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+}
+
+
+
+.menu_area ul li a{
+    color:white;
+    font-family: lato;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+.menu_area ul li:hover{
+    background-color: rgb(183, 108, 16);
+    transition: all ease-in 0.5s;
+    color: aquamarine;
+
+}
+
+.menu_area ul ul{
+    display: none;
+}
+
+.menu_area ul li:hover > ul{
+    display: block;
+    text-transform: capitalize;
+    
+}
+
+.info{
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+.info h1{
+    color: #fff;
+    font-family: lato;
+    font-size: 60px;
+}
+.info p{
+    color: #fff;
+    font-size: 20px;
+    font-family: arial;
+    margin: 30px 0px;
+}
+
+.btn button{
+    padding: 15px 45px;
+    background: transparent;
+    border: 2px solid aqua;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn button::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: rgb(4, 121, 0);
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: .5s all ease-in-out;
+}
+.btn button:hover::after{
+    width: 100%;
+}
